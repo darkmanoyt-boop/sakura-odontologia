@@ -1,0 +1,21 @@
+:root {
+  color-scheme: light;
+  --paper: #f8f4f0;
+  --paper-warm: #f2eae4;
+  --white: #fffdfa;
+  --ink: #302a2d;
+  --ink-soft: #51464a;
+  --muted: #817579;
+  --line: #dfd1cc;
+  --rose: #df8794;
+  --rose-light: #f4d5d8;
+  --rose-pale: #f9e9e7;
+  --rose-deep: #a84f64;
+  --wine: #60313d;
+  --wine-dark: #47232d;
+  --serif: "Playfair Display", Georgia, serif;
+  --sans: "DM Sans", "Manrope", Arial, sans-serif;
+  --shell: 1160px;
+  --gutter: clamp(22px, 5vw, 76px);
+  --ease: cubic-bezier(.2,.7,.2,1);
+}
