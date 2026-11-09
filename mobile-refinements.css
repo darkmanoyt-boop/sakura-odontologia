@@ -1,0 +1,110 @@
+
+/* Mobile refinement + deterministic vector marks (no emoji font fallback). */
+.icon-arrow,.icon-down,.icon-up{display:inline-block;position:relative;flex:0 0 auto;width:18px;height:18px;vertical-align:middle;color:currentColor}
+.icon-arrow::before{content:"";position:absolute;width:9px;height:9px;right:3px;top:3px;border-top:1.6px solid currentColor;border-right:1.6px solid currentColor}
+.icon-arrow::after{content:"";position:absolute;width:13px;height:1.6px;right:3px;top:10px;background:currentColor;transform:rotate(-45deg);transform-origin:right center}
+.icon-down::before{content:"";position:absolute;width:10px;height:10px;left:3px;top:1px;border-right:1.7px solid currentColor;border-bottom:1.7px solid currentColor;transform:rotate(45deg)}
+.icon-down::after{content:"";position:absolute;width:1.7px;height:15px;left:8px;top:0;background:currentColor}
+.icon-up::before{content:"";position:absolute;width:10px;height:10px;left:3px;top:6px;border-left:1.7px solid currentColor;border-top:1.7px solid currentColor;transform:rotate(45deg)}
+.icon-up::after{content:"";position:absolute;width:1.7px;height:15px;left:8px;top:3px;background:currentColor}
+.flower-mark{display:inline-block;position:relative;width:24px;height:24px;flex:0 0 auto}
+.flower-mark::before,.flower-mark::after{content:"";position:absolute;left:50%;top:50%;background:currentColor;transform:translate(-50%,-50%)}
+.flower-mark::before{width:1.5px;height:100%;box-shadow:0 0 0 0 currentColor}
+.flower-mark::after{width:100%;height:1.5px}
+.detail-flower.flower-mark{width:64px;height:64px}
+.detail-flower.flower-mark::before{box-shadow:0 0 0 0 currentColor;transform:translate(-50%,-50%) rotate(45deg)}
+.detail-flower.flower-mark::after{transform:translate(-50%,-50%) rotate(45deg)}
+.hero-photo{width:100%;height:100%;object-fit:cover;object-position:center 45%;filter:saturate(.88)}
+.hero-arch-inner::after{content:"";position:absolute;inset:0;background:linear-gradient(145deg,rgba(255,246,242,.04),rgba(77,35,43,.12));pointer-events:none}
+.clinic-gallery{padding-block:100px 115px}
+.gallery-heading{display:grid;grid-template-columns:1.1fr .7fr;align-items:end;gap:20px 60px;margin-bottom:38px}
+.gallery-heading .section-kicker{grid-column:1/-1;margin:0}
+.gallery-heading h2{margin:0;font-family:var(--serif);font-size:clamp(42px,5vw,66px);font-weight:500;letter-spacing:-.055em;line-height:1.02}
+.gallery-heading h2 em{color:var(--rose-deep)}
+.gallery-heading>p{max-width:360px;margin:0 0 6px;color:var(--muted);font-size:12px;line-height:1.9}
+.gallery-grid{display:grid;grid-template-columns:1.25fr .85fr .85fr;gap:16px;align-items:stretch}
+.gallery-card{position:relative;min-width:0;margin:0;overflow:hidden;background:var(--paper-warm);aspect-ratio:4/5}
+.gallery-card-main{aspect-ratio:5/4}
+.gallery-card img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
+.gallery-card-main img{object-position:center 42%}
+.gallery-card figcaption{position:absolute;left:12px;bottom:12px;padding:9px 12px;background:rgba(255,253,250,.94);color:var(--wine);font-family:var(--serif);font-size:14px}
+@media(max-width:700px){
+ :root{--gutter:20px}
+ .header-inner{min-height:72px}
+ .brand{gap:9px}.brand-symbol{width:42px;height:42px}.brand-wordmark strong{font-size:13px;letter-spacing:.16em}
+ .menu-toggle{width:42px;height:42px}
+ .hero{gap:27px;padding-block:42px 48px}
+ .eyebrow{font-size:7px;letter-spacing:.17em;gap:8px}
+ .hero h1{max-width:100%;font-size:clamp(39px,10.2vw,49px);line-height:1.03;letter-spacing:-.06em}
+ .hero-description{font-size:14px;line-height:1.75;margin-top:17px}
+ .hero-actions{align-items:stretch;gap:13px;margin-top:22px}
+ .hero-actions .button{min-height:50px;flex:1;padding-inline:14px;font-size:12px}
+ .text-link{font-size:11px;gap:8px}
+ .hero-footnote{margin-top:26px;font-size:13px}
+ .hero-composition{min-height:300px;margin-inline:0;padding:8px 8px 26px}
+ .hero-arch{height:270px;padding:8px}
+ .hero-arch-shadow{top:22px;right:10px;bottom:8px;left:20px;transform:translate(7px,7px)}
+ .hero-emblem{right:8px;bottom:8px;padding:6px 9px 6px 6px;gap:6px}
+ .hero-emblem img{width:32px;height:32px}.hero-emblem span{font-size:7px}
+ .hero-caption{left:-3px;bottom:4px;padding:8px 10px;font-size:10px}
+ .hero-vertical-note{font-size:6px;right:-2px}
+ .principles-inner{min-height:0;display:grid;grid-template-columns:1fr auto 1fr;justify-items:center;gap:10px;padding-block:15px}
+ .principles-inner span{font-size:6.5px;letter-spacing:.12em;text-align:center}
+ .principles-inner span:last-child{grid-column:1/-1}
+ .principles-inner i{font-size:0}
+ .principles-inner .flower-mark{width:12px;height:12px}
+ .services-section{padding-block:68px 72px}
+ .services-intro .section-kicker{margin-bottom:17px}
+ .services-intro h2{font-size:clamp(36px,9.3vw,46px);line-height:1.04}
+ .services-intro>p{font-size:13px;line-height:1.75;margin-top:16px}
+ .services-explorer{gap:22px;margin-top:28px}
+ .service-item{min-height:62px;grid-template-columns:30px minmax(0,1fr) 20px;gap:8px;padding-block:8px}
+ .service-item:hover,.service-item.is-active{padding-left:9px}
+ .service-title{font-size:clamp(17px,4.8vw,20px)}
+ .service-no{font-size:15px}
+ .service-arrow{width:17px;height:17px}
+ .service-detail{min-height:0;padding:20px}
+ .detail-symbol{width:88px;height:88px;margin-block:17px}
+ .detail-flower.flower-mark{width:38px;height:38px}
+ .service-detail h3{font-size:28px}
+ .detail-description{font-size:13px;line-height:1.7}
+ .detail-link{font-size:12px;gap:10px}
+ .services-disclaimer{font-size:10px;line-height:1.6}
+ .space-section{min-height:620px}
+ .space-content{min-height:620px;padding-top:56px;padding-bottom:65px}
+ .space-copy h2{font-size:clamp(39px,9.5vw,51px);line-height:1.04}
+ .space-copy>p:not(.space-overline){font-size:13px;line-height:1.75;margin-block:18px 22px}
+ .space-geometry{right:-34%;bottom:-5%;width:125%;height:48%;opacity:.38}
+ .space-side-note{font-size:6px}.space-index{font-size:7px}
+ .clinic-gallery{padding-block:68px 75px}
+ .gallery-heading{display:block;margin-bottom:25px}
+ .gallery-heading .section-kicker{margin-bottom:16px}
+ .gallery-heading h2{font-size:clamp(36px,9vw,46px)}
+ .gallery-heading>p{font-size:13px;line-height:1.7;margin-top:15px}
+ .gallery-grid{grid-template-columns:1fr 1fr;gap:10px}
+ .gallery-card-main{grid-column:1/-1;aspect-ratio:1.35/1}
+ .gallery-card{aspect-ratio:1/1.1}
+ .gallery-card figcaption{left:8px;bottom:8px;padding:7px 9px;font-size:12px}
+ .approach-section{grid-template-columns:52px minmax(0,1fr);gap:14px;padding-block:60px}
+ .approach-mark{width:50px;height:50px}.approach-mark img{width:42px;height:42px}
+ .approach-copy .section-kicker{font-size:6px;letter-spacing:.12em;gap:7px}
+ .approach-copy h2{font-size:clamp(31px,7.5vw,39px);line-height:1.05}
+ .approach-copy>p:last-child{font-size:13px;line-height:1.7}
+ .contact-topline{font-size:7px;padding-top:20px}
+ .contact-inner{gap:28px;padding-block:52px 60px}
+ .contact-copy h2{font-size:clamp(42px,10vw,54px);line-height:1.02}
+ .contact-copy>p:last-child{font-size:13px;line-height:1.7}
+ .contact-detail{padding-bottom:17px;margin-bottom:18px}
+ .contact-detail a,.contact-detail p{font-size:24px}
+ .contact-actions{gap:9px;margin-top:20px}
+ .contact-actions .button{min-height:54px;font-size:12px;padding-inline:14px}
+ .contact-note{font-size:11px;line-height:1.65}
+ .contact-instagram{font-size:12px}
+ .footer-main{gap:16px;padding-block:22px}
+ .footer-main>p,.back-top{font-size:11px}
+ .footer-bottom{font-size:10px;padding-block:14px}
+ .cookie-banner{bottom:12px;padding:14px}
+ .cookie-copy p{font-size:11px}
+ .cookie-actions .button{font-size:10px}
+}
+@media(max-width:380px){.hero h1{font-size:38px}.hero-actions{flex-direction:column}.hero-actions .button{width:100%}.service-title{font-size:17px}.contact-copy h2{font-size:41px}}

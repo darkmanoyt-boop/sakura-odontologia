@@ -1,0 +1,86 @@
+/* Sakura V3 — evolução digital da identidade original */
+:root {
+  --paper: #fbf7f4;
+  --paper-warm: #f7eeea;
+  --white: #fffefd;
+  --ink: #393438;
+  --ink-soft: #5d5356;
+  --muted: #83777a;
+  --line: #ead8d4;
+  --rose: #eeaeb2;
+  --rose-light: #f7d9d8;
+  --rose-pale: #fff0ed;
+  --rose-deep: #df777e;
+  --wine: #8b4d55;
+  --wine-dark: #75434b;
+}
+body { background: var(--paper); color: var(--ink); }
+.site-header { background: rgba(251,247,244,.97); border-color: var(--line); }
+.brand-symbol { border-radius: 50%; background: #fff; }
+.brand-symbol img, .approach-mark img { mix-blend-mode: multiply; }
+.main-nav a { color: var(--ink-soft); }
+.main-nav .nav-contact { border-color: var(--rose-deep); color: var(--wine); }
+.hero { min-height: 650px; gap: clamp(34px,5vw,72px); }
+.hero h1 { max-width: 650px; font-size: clamp(54px,5.5vw,78px); line-height: 1.04; letter-spacing: -.06em; }
+.hero h1 em, h2 em { color: var(--rose-deep); }
+.hero-description { color: var(--ink-soft); }
+.button-primary { background: var(--rose-deep); border-color: var(--rose-deep); color: white; }
+.button-primary:hover { background: var(--wine); border-color: var(--wine); }
+.hero-composition { min-height: 480px; }
+.hero-arch-shadow { border-color: #e9bfc0; }
+.hero-arch { background: #f4d7d4; }
+.hero-arch-inner { background: #fff0ed; }
+.hero-facets { opacity: .78; filter: saturate(.78) brightness(1.08); }
+.hero-emblem { border: 1px solid #f0d6d2; box-shadow: 0 8px 24px rgba(105,65,67,.08); }
+.hero-emblem span { color: var(--wine); }
+.hero-caption { background: #fffaf7; }
+.principles-strip { background: #f8eeea; border-color: var(--line); }
+.principles-inner i, .footnote-flower { color: var(--rose-deep); }
+.services-section { padding-block: 112px 120px; }
+.service-item { border-color: var(--line); }
+.service-item.is-active { background: #f8e9e5; }
+.service-no, .service-arrow { color: var(--rose-deep); }
+.service-detail { background: #f8eeea; border: 1px solid #f0ded9; }
+.detail-flower { color: var(--rose-deep); }
+.detail-orbit { border-color: #eab9b8; }
+.detail-link { color: var(--wine); border-color: var(--rose-deep); }
+/* A parede geométrica permanece como assinatura secundária, não como identidade dominante. */
+.space-section { min-height: 590px; background: #f7e7e3; color: var(--ink); }
+.space-content { min-height: 590px; grid-template-columns: minmax(0,1fr) 130px; }
+.space-copy { max-width: 590px; padding-block: 86px; }
+.space-copy h2 { color: var(--ink); font-size: clamp(48px,5.4vw,72px); }
+.space-copy h2 em { color: var(--rose-deep); }
+.space-copy > p:not(.space-overline) { color: var(--ink-soft); }
+.space-overline, .section-kicker-light { color: var(--wine); }
+.space-geometry { width: 43%; right: -3%; opacity: .52; }
+.space-geometry::before { background: linear-gradient(90deg,#f7e7e3 0%,rgba(247,231,227,.28) 45%,rgba(247,231,227,.02) 100%); }
+.space-geometry svg { filter: saturate(.68) brightness(1.13); }
+.button-light { background: #fffdfa; color: var(--wine); border-color: #fffdfa; }
+.space-side-note { color: var(--wine); }
+.space-index { color: var(--wine); }
+.approach-section { min-height: 390px; }
+.approach-mark { border-color: #efc9c5; background: #fffdfa; }
+.approach-copy h2 { font-size: clamp(42px,5vw,68px); }
+.contact-section { background: #8b4d55; }
+.contact-inner { padding-block: 82px 90px; }
+.contact-copy h2 { font-size: clamp(54px,5.5vw,76px); }
+.contact-copy h2 em { color: #ffd0ca; }
+.contact-bottom-geometry { opacity: .2; }
+.site-footer { background: #f7eeea; }
+.footer-main, .footer-bottom { border-color: var(--line); }
+.cookie-banner { border-color: #efd2cf; }
+.cookie-copy strong { color: var(--wine); }
+.button-cookie-primary { background: var(--rose-deep); }
+.button-cookie-secondary { color: var(--wine); }
+@media (max-width: 700px) {
+  .main-nav { background: var(--paper); }
+  .hero { padding-block: 54px 66px; }
+  .hero h1 { font-size: clamp(45px,11vw,62px); }
+  .hero-composition { min-height: 340px; }
+  .hero-arch { height: 310px; }
+  .space-section, .space-content { min-height: 650px; }
+  .space-copy { padding-block: 65px 35px; }
+  .space-copy h2 { font-size: clamp(44px,10vw,60px); }
+  .space-geometry { right: -25%; bottom: -4%; width: 105%; height: 45%; opacity: .36; }
+  .space-geometry::before { background: linear-gradient(180deg,#f7e7e3 0%,rgba(247,231,227,.2) 100%); }
+}
